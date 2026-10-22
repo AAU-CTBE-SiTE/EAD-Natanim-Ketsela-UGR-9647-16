@@ -1,4 +1,4 @@
-package com.site;
+package com.SITE;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

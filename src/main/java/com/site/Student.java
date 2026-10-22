@@ -1,4 +1,4 @@
-package com.SITE;
+package com.site;
 import jakarta.persistence.*;
 
 @Entity
