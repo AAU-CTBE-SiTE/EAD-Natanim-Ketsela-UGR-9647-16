@@ -8,11 +8,23 @@ https://www.springframework.org/schema/beans/spring-beans.xsd">
         <property name="city" value="Addis"/>
         <property name="country" value="Ethiopia"/>
     </bean>
-
-    <bean id="student" class="com.site.Student">
-            <constructor-arg name="id" value="1"/>
-            <constructor-arg name="name" value=" Elon Musk"/>
-            <constructor-arg name="age" value="55"/>
-            <constructor-arg name="address" ref="address"/>
+    <bean id="math" class="com.site.Subject">
+        <property name="subjectName" value="Maths 101"/>
     </bean>
+    <bean id="Java" class="com.site.Subject">
+        <property name="subjectName" value="Java EE"/>
+    </bean>
+
+    <bean id="student" class="com.site.Student" scope="prototype">
+        <!--   <property name="id" value="1"/>
+           <property name="name" value=" Elon Musk"/>
+           <property name="age" value="55"/>
+           <property name="address" ref="address"/>
+           <property name="subjects">
+               <list>
+                   <ref bean="math"/>
+                   <ref bean="Java"/>
+               </list>
+           </property> -->
+   </bean>
 </beans>

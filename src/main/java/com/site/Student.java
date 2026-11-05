@@ -3,6 +3,8 @@ package com.site;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 @Data
 @ToString
 public class Student {
@@ -10,15 +12,19 @@ public class Student {
     private String name;
     private int age;
     private Address address;
-    Student(int id, String name, int age, Address address) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.address = address;
-        System.out.println("constructor called!");
+    private List<Subject> subjects;
 
+    public Student(){
+        System.out.println("Empty Constructor");
     }
-    public void getDetails()  {
-        System.out.println("Student details: " + this);
+
+    public void getDetails() {
+        System.out.println("Student Name: " + this.getName());
+        int index = 1;
+        for (Subject subject : subjects) {
+            System.out.println("Subject " + index + ": " +
+                    subject.getSubjectName());
+            index++;
+        }
     }
 }
